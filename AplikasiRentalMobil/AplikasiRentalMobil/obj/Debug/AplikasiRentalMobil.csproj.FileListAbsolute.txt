@@ -9,3 +9,6 @@ C:\Users\Acer\Documents\Tugas semester 5\KUMPULAN TUGAS NET\AplikasiRentalMobil\
 C:\Users\Acer\Documents\Tugas semester 5\KUMPULAN TUGAS NET\AplikasiRentalMobil\AplikasiRentalMobil\obj\Debug\AplikasiRentalMobil.csproj.CoreCompileInputs.cache
 C:\Users\Acer\Documents\Tugas semester 5\KUMPULAN TUGAS NET\AplikasiRentalMobil\AplikasiRentalMobil\obj\Debug\AplikasiRentalMobil.exe
 C:\Users\Acer\Documents\Tugas semester 5\KUMPULAN TUGAS NET\AplikasiRentalMobil\AplikasiRentalMobil\obj\Debug\AplikasiRentalMobil.pdb
+C:\Users\Acer\Documents\Tugas semester 5\KUMPULAN TUGAS NET\AplikasiRentalMobil\AplikasiRentalMobil\obj\Debug\AplikasiRentalMobil.FormDataMobil.resources
+C:\Users\Acer\Documents\Tugas semester 5\KUMPULAN TUGAS NET\AplikasiRentalMobil\AplikasiRentalMobil\obj\Debug\AplikasiRentalMobil.FormDataPelanggan.resources
+C:\Users\Acer\Documents\Tugas semester 5\KUMPULAN TUGAS NET\AplikasiRentalMobil\AplikasiRentalMobil\obj\Debug\AplikasiRentalMobil.FormTransaksi.resources

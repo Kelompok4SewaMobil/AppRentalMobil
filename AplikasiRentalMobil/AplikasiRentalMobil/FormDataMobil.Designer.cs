@@ -90,6 +90,7 @@ namespace AplikasiRentalMobil
             this.textboxnomobil.Name = "textboxnomobil";
             this.textboxnomobil.Size = new System.Drawing.Size(188, 26);
             this.textboxnomobil.TabIndex = 5;
+            this.textboxnomobil.TextChanged += new System.EventHandler(this.textboxnomobil_TextChanged);
             // 
             // textboxjenismobil
             // 
@@ -97,6 +98,7 @@ namespace AplikasiRentalMobil
             this.textboxjenismobil.Name = "textboxjenismobil";
             this.textboxjenismobil.Size = new System.Drawing.Size(188, 26);
             this.textboxjenismobil.TabIndex = 6;
+            this.textboxjenismobil.TextChanged += new System.EventHandler(this.textboxjenismobil_TextChanged);
             // 
             // textboxmerkmobil
             // 
@@ -104,6 +106,7 @@ namespace AplikasiRentalMobil
             this.textboxmerkmobil.Name = "textboxmerkmobil";
             this.textboxmerkmobil.Size = new System.Drawing.Size(188, 26);
             this.textboxmerkmobil.TabIndex = 7;
+            this.textboxmerkmobil.TextChanged += new System.EventHandler(this.textboxmerkmobil_TextChanged);
             // 
             // textboxhargasewa
             // 
@@ -111,6 +114,7 @@ namespace AplikasiRentalMobil
             this.textboxhargasewa.Name = "textboxhargasewa";
             this.textboxhargasewa.Size = new System.Drawing.Size(188, 26);
             this.textboxhargasewa.TabIndex = 8;
+            this.textboxhargasewa.TextChanged += new System.EventHandler(this.textboxhargasewa_TextChanged);
             // 
             // label6
             // 
@@ -126,6 +130,7 @@ namespace AplikasiRentalMobil
             this.textboxcarinomobil.Name = "textboxcarinomobil";
             this.textboxcarinomobil.Size = new System.Drawing.Size(188, 26);
             this.textboxcarinomobil.TabIndex = 10;
+            this.textboxcarinomobil.TextChanged += new System.EventHandler(this.textboxcarinomobil_TextChanged);
             // 
             // dataGridView1
             // 
@@ -136,6 +141,7 @@ namespace AplikasiRentalMobil
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(756, 302);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label7
             // 
@@ -149,7 +155,7 @@ namespace AplikasiRentalMobil
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(628, 177);
+            this.label5.Location = new System.Drawing.Point(656, 164);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 20);
             this.label5.TabIndex = 16;
@@ -207,6 +213,7 @@ namespace AplikasiRentalMobil
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormDataMobil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDataMobil";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
