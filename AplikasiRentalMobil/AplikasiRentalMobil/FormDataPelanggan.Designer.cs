@@ -43,8 +43,8 @@ namespace AplikasiRentalMobil
             this.btnsave = new System.Windows.Forms.Button();
             this.btnedit = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -107,6 +107,7 @@ namespace AplikasiRentalMobil
             this.textboxidpelanggan.Name = "textboxidpelanggan";
             this.textboxidpelanggan.Size = new System.Drawing.Size(179, 26);
             this.textboxidpelanggan.TabIndex = 6;
+            this.textboxidpelanggan.TextChanged += new System.EventHandler(this.textboxidpelanggan_TextChanged);
             // 
             // textboxnamapelanggan
             // 
@@ -114,6 +115,7 @@ namespace AplikasiRentalMobil
             this.textboxnamapelanggan.Name = "textboxnamapelanggan";
             this.textboxnamapelanggan.Size = new System.Drawing.Size(179, 26);
             this.textboxnamapelanggan.TabIndex = 7;
+            this.textboxnamapelanggan.TextChanged += new System.EventHandler(this.textboxnamapelanggan_TextChanged);
             // 
             // textboxnokotak
             // 
@@ -121,6 +123,7 @@ namespace AplikasiRentalMobil
             this.textboxnokotak.Name = "textboxnokotak";
             this.textboxnokotak.Size = new System.Drawing.Size(179, 26);
             this.textboxnokotak.TabIndex = 8;
+            this.textboxnokotak.TextChanged += new System.EventHandler(this.textboxnokotak_TextChanged);
             // 
             // textboxalamat
             // 
@@ -128,6 +131,7 @@ namespace AplikasiRentalMobil
             this.textboxalamat.Name = "textboxalamat";
             this.textboxalamat.Size = new System.Drawing.Size(179, 26);
             this.textboxalamat.TabIndex = 9;
+            this.textboxalamat.TextChanged += new System.EventHandler(this.textboxalamat_TextChanged);
             // 
             // textboxcari
             // 
@@ -135,6 +139,7 @@ namespace AplikasiRentalMobil
             this.textboxcari.Name = "textboxcari";
             this.textboxcari.Size = new System.Drawing.Size(184, 26);
             this.textboxcari.TabIndex = 10;
+            this.textboxcari.TextChanged += new System.EventHandler(this.textboxcari_TextChanged);
             // 
             // btnsave
             // 
@@ -144,6 +149,7 @@ namespace AplikasiRentalMobil
             this.btnsave.TabIndex = 11;
             this.btnsave.Text = "Save";
             this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // btnedit
             // 
@@ -153,6 +159,7 @@ namespace AplikasiRentalMobil
             this.btnedit.TabIndex = 12;
             this.btnedit.Text = "Edit";
             this.btnedit.UseVisualStyleBackColor = true;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btndelete
             // 
@@ -162,16 +169,18 @@ namespace AplikasiRentalMobil
             this.btndelete.TabIndex = 13;
             this.btndelete.Text = "Delete";
             this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(66, 256);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(745, 319);
-            this.dataGridView1.TabIndex = 14;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Location = new System.Drawing.Point(55, 250);
+            this.dgv.Name = "dgv";
+            this.dgv.RowHeadersWidth = 62;
+            this.dgv.RowTemplate.Height = 28;
+            this.dgv.Size = new System.Drawing.Size(756, 325);
+            this.dgv.TabIndex = 14;
+            this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             // 
             // FormDataPelanggan
             // 
@@ -179,7 +188,7 @@ namespace AplikasiRentalMobil
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(865, 599);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.btnsave);
@@ -197,7 +206,8 @@ namespace AplikasiRentalMobil
             this.Name = "FormDataPelanggan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDataPelanggan";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormDataPelanggan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,6 +229,6 @@ namespace AplikasiRentalMobil
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Button btndelete;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv;
     }
 }

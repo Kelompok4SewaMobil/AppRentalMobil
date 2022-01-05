@@ -213,6 +213,11 @@ namespace AplikasiRentalMobil
             textboxmerkmobil.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             textboxhargasewa.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
+
+        private void FormDataMobil_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     }
