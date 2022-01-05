@@ -37,13 +37,13 @@ namespace AplikasiRentalMobil
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnproses = new System.Windows.Forms.Button();
-            this.texboxidtransaksi = new System.Windows.Forms.TextBox();
             this.textboxlamasewa = new System.Windows.Forms.TextBox();
-            this.textboxnomobil = new System.Windows.Forms.TextBox();
-            this.textboxidpelanggan = new System.Windows.Forms.TextBox();
             this.textboxcaritransaksi = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textboxidtransaksi = new System.Windows.Forms.TextBox();
+            this.textboxnomobil2 = new System.Windows.Forms.TextBox();
+            this.textboxidpelanggan2 = new System.Windows.Forms.TextBox();
+            this.datetglsewa = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,13 +118,7 @@ namespace AplikasiRentalMobil
             this.btnproses.TabIndex = 7;
             this.btnproses.Text = "Proses";
             this.btnproses.UseVisualStyleBackColor = true;
-            // 
-            // texboxidtransaksi
-            // 
-            this.texboxidtransaksi.Location = new System.Drawing.Point(183, 51);
-            this.texboxidtransaksi.Name = "texboxidtransaksi";
-            this.texboxidtransaksi.Size = new System.Drawing.Size(200, 26);
-            this.texboxidtransaksi.TabIndex = 8;
+            this.btnproses.Click += new System.EventHandler(this.btnproses_Click);
             // 
             // textboxlamasewa
             // 
@@ -132,20 +126,7 @@ namespace AplikasiRentalMobil
             this.textboxlamasewa.Name = "textboxlamasewa";
             this.textboxlamasewa.Size = new System.Drawing.Size(200, 26);
             this.textboxlamasewa.TabIndex = 9;
-            // 
-            // textboxnomobil
-            // 
-            this.textboxnomobil.Location = new System.Drawing.Point(183, 176);
-            this.textboxnomobil.Name = "textboxnomobil";
-            this.textboxnomobil.Size = new System.Drawing.Size(200, 26);
-            this.textboxnomobil.TabIndex = 11;
-            // 
-            // textboxidpelanggan
-            // 
-            this.textboxidpelanggan.Location = new System.Drawing.Point(183, 216);
-            this.textboxidpelanggan.Name = "textboxidpelanggan";
-            this.textboxidpelanggan.Size = new System.Drawing.Size(200, 26);
-            this.textboxidpelanggan.TabIndex = 12;
+            this.textboxlamasewa.TextChanged += new System.EventHandler(this.textboxlamasewa_TextChanged);
             // 
             // textboxcaritransaksi
             // 
@@ -153,13 +134,7 @@ namespace AplikasiRentalMobil
             this.textboxcaritransaksi.Name = "textboxcaritransaksi";
             this.textboxcaritransaksi.Size = new System.Drawing.Size(164, 26);
             this.textboxcaritransaksi.TabIndex = 13;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(183, 132);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker1.TabIndex = 14;
+            this.textboxcaritransaksi.TextChanged += new System.EventHandler(this.textboxcaritransaksi_TextChanged);
             // 
             // dataGridView1
             // 
@@ -170,19 +145,52 @@ namespace AplikasiRentalMobil
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(738, 288);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // textboxidtransaksi
+            // 
+            this.textboxidtransaksi.Location = new System.Drawing.Point(183, 51);
+            this.textboxidtransaksi.Name = "textboxidtransaksi";
+            this.textboxidtransaksi.Size = new System.Drawing.Size(200, 26);
+            this.textboxidtransaksi.TabIndex = 16;
+            this.textboxidtransaksi.TextChanged += new System.EventHandler(this.textboxidtransaksi_TextChanged);
+            // 
+            // textboxnomobil2
+            // 
+            this.textboxnomobil2.Location = new System.Drawing.Point(183, 176);
+            this.textboxnomobil2.Name = "textboxnomobil2";
+            this.textboxnomobil2.Size = new System.Drawing.Size(200, 26);
+            this.textboxnomobil2.TabIndex = 17;
+            this.textboxnomobil2.TextChanged += new System.EventHandler(this.textboxnomobil2_TextChanged);
+            // 
+            // textboxidpelanggan2
+            // 
+            this.textboxidpelanggan2.Location = new System.Drawing.Point(183, 216);
+            this.textboxidpelanggan2.Name = "textboxidpelanggan2";
+            this.textboxidpelanggan2.Size = new System.Drawing.Size(200, 26);
+            this.textboxidpelanggan2.TabIndex = 18;
+            this.textboxidpelanggan2.TextChanged += new System.EventHandler(this.textboxidpelanggan2_TextChanged);
+            // 
+            // datetglsewa
+            // 
+            this.datetglsewa.Location = new System.Drawing.Point(183, 131);
+            this.datetglsewa.Name = "datetglsewa";
+            this.datetglsewa.Size = new System.Drawing.Size(200, 26);
+            this.datetglsewa.TabIndex = 19;
+            this.datetglsewa.ValueChanged += new System.EventHandler(this.datetglsewa_ValueChanged);
             // 
             // FormTransaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 563);
+            this.Controls.Add(this.datetglsewa);
+            this.Controls.Add(this.textboxidpelanggan2);
+            this.Controls.Add(this.textboxnomobil2);
+            this.Controls.Add(this.textboxidtransaksi);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textboxcaritransaksi);
-            this.Controls.Add(this.textboxidpelanggan);
-            this.Controls.Add(this.textboxnomobil);
             this.Controls.Add(this.textboxlamasewa);
-            this.Controls.Add(this.texboxidtransaksi);
             this.Controls.Add(this.btnproses);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -209,12 +217,12 @@ namespace AplikasiRentalMobil
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnproses;
-        private System.Windows.Forms.TextBox texboxidtransaksi;
         private System.Windows.Forms.TextBox textboxlamasewa;
-        private System.Windows.Forms.TextBox textboxnomobil;
-        private System.Windows.Forms.TextBox textboxidpelanggan;
         private System.Windows.Forms.TextBox textboxcaritransaksi;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textboxidtransaksi;
+        private System.Windows.Forms.TextBox textboxnomobil2;
+        private System.Windows.Forms.TextBox textboxidpelanggan2;
+        private System.Windows.Forms.DateTimePicker datetglsewa;
     }
 }
