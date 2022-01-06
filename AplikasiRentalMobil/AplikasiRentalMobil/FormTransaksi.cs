@@ -15,7 +15,7 @@ namespace AplikasiRentalMobil
     {
         //membuat koneksi database
         SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-44L09114\SQLEXPRESS;Initial Catalog=AppRentalMobil;Integrated Security=True");
-        SqlCommand cmd;
+        // Tambahkan Variabel untuk perintah sql
         SqlDataAdapter adapt;
         private SqlCommand cmd;
 
@@ -46,7 +46,7 @@ namespace AplikasiRentalMobil
             adapt = new SqlDataAdapter("select *From dbo.data_transaksi", con);
             adapt.Fill(dt);
             //menampilkan data di GrideView
-            dataGridView1.DataSource = dt;
+            dgv_transaksi.DataSource = dt;
             //menutup koneksi
             con.Close();
         }
@@ -95,7 +95,24 @@ namespace AplikasiRentalMobil
                 MessageBox.Show("Kolom Belum Terisi");
             }
         }
-      
+
+        private void textboxcaritransaksi_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-44L09114\SQLEXPRESS;Initial Catalog=AppRentalMobil;Integrated Security=True");
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Select * from dbo.data_transaksi where id_transaksi='" + textboxcaritransaksi + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgv_transaksi.DataSource = dt;
+            con.Close();
+
+
+        }
+
 
         private void textboxlamasewa_TextChanged(object sender, EventArgs e)
         {
@@ -107,11 +124,6 @@ namespace AplikasiRentalMobil
 
         }
 
-
-        private void textboxcaritransaksi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -134,6 +146,11 @@ namespace AplikasiRentalMobil
         }
 
         private void datetglsewa_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_transaksi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
